@@ -1,0 +1,31 @@
+.main-wrapper {
+  opacity: 0;
+}
+
+.is--menu--open {
+  color: black;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+.navbar--menu {
+  display: flex;
+}
+
+.pebbles-text {
+  pointer-events: none;
+}
+
+.navbar.is--scrolled .navbar-brand {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar.is--scrolled .navbar-brand {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
