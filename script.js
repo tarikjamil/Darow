@@ -1,26 +1,10 @@
 // smooth scroll
-const lenis = new Lenis({
-  duration: 1, // Decrease the duration for faster scrolling (original: 1.2)
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-  direction: "vertical", // vertical, horizontal
-  gestureDirection: "vertical", // vertical, horizontal, both
-  smooth: true,
-  autoResize: true,
-  mouseMultiplier: 1.1, // Increase the multiplier for more sensitive scrolling (original: 1)
-  smoothTouch: false,
-  touchMultiplier: 3, // Increase the multiplier for faster touch scrolling (original: 2)
-  infinite: false
-});
-
-//get scroll value
-lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+const lenis = new Lenis();
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
 
 $(".menu--link").on("click", function () {
   $(this).toggleClass("is--menu--open");
