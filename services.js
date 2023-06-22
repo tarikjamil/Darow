@@ -157,6 +157,8 @@ window.addEventListener("pageshow", (event) => {
               window.pageYOffset +
               yOffset;
             window.scrollTo({ top: yPosition, behavior: "smooth" });
+            lenis.destroy(); // Assuming lenis is your Lenis instance
+            lenis = new Lenis();
           }
         });
         gsap.to(content.querySelectorAll(".pebbles-absolute-image"), {
