@@ -5,6 +5,7 @@ const lenis = new Lenis({
   direction: "vertical", // vertical, horizontal
   gestureDirection: "vertical", // vertical, horizontal, both
   smooth: true,
+  autoResize: true,
   mouseMultiplier: 1.1, // Increase the multiplier for more sensitive scrolling (original: 1)
   smoothTouch: false,
   touchMultiplier: 3, // Increase the multiplier for faster touch scrolling (original: 2)

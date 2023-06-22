@@ -1,3 +1,11 @@
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
 .main-wrapper {
   opacity: 0;
 }
