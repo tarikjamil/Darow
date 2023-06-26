@@ -183,7 +183,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $(".underline.is--link").on("click", function (event) {
+  $(".underline").on("click", function (event) {
     event.preventDefault();
     var href = $(this).attr("linkos");
     $(href).trigger("click");
