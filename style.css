@@ -31,10 +31,6 @@ html.lenis {
   pointer-events: none;
 }
 
-.category-item-bg {
-  border-radius: 36rem !important;
-}
-
 @media screen and (max-width: 991px) {
   .navbar.is--scrolled .navbar-brand {
     opacity: 1;
