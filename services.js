@@ -12,17 +12,17 @@ document.querySelectorAll(".row--trigger").forEach((trigger) => {
       height: 0,
       opacity: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(".pebbles-absolute-image", {
       scale: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(".pebbles-text", {
       opacity: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
 
     if (!isOpen) {
@@ -36,20 +36,19 @@ document.querySelectorAll(".row--trigger").forEach((trigger) => {
           const yPosition =
             trigger.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: yPosition, behavior: "smooth" });
-
-        }
+        },
       });
       gsap.to(content.querySelectorAll(".pebbles-absolute-image"), {
         scale: 1,
         duration: 0.5,
         ease: "power1.inOut",
-        stagger: 0.1
+        stagger: 0.1,
       });
       gsap.to(content.querySelectorAll(".pebbles-text"), {
         opacity: 1,
         duration: 0.5,
         ease: "power1.inOut",
-        stagger: 0.1
+        stagger: 0.1,
       });
     }
   });
@@ -67,17 +66,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
           height: 0,
           opacity: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
         gsap.to(".pebbles-absolute-image", {
           scale: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
         gsap.to(".pebbles-text", {
           opacity: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
 
         gsap.to(content, {
@@ -92,19 +91,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
               window.pageYOffset +
               yOffset;
             window.scrollTo({ top: yPosition, behavior: "smooth" });
-          }
+          },
         });
         gsap.to(content.querySelectorAll(".pebbles-absolute-image"), {
           scale: 1,
           duration: 0.5,
           ease: "power1.inOut",
-          stagger: 0.1
+          stagger: 0.1,
         });
         gsap.to(content.querySelectorAll(".pebbles-text"), {
           opacity: 1,
           duration: 0.5,
           ease: "power1.inOut",
-          stagger: 0.1
+          stagger: 0.1,
         });
       }
     }
@@ -129,17 +128,17 @@ window.addEventListener("pageshow", (event) => {
           height: 0,
           opacity: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
         gsap.to(".pebbles-absolute-image", {
           scale: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
         gsap.to(".pebbles-text", {
           opacity: 0,
           duration: 0.5,
-          ease: "power1.inOut"
+          ease: "power1.inOut",
         });
 
         gsap.to(content, {
@@ -156,19 +155,19 @@ window.addEventListener("pageshow", (event) => {
             window.scrollTo({ top: yPosition, behavior: "smooth" });
             lenis.destroy(); // Assuming lenis is your Lenis instance
             lenis = new Lenis();
-          }
+          },
         });
         gsap.to(content.querySelectorAll(".pebbles-absolute-image"), {
           scale: 1,
           duration: 0.5,
           ease: "power1.inOut",
-          stagger: 0.1
+          stagger: 0.1,
         });
         gsap.to(content.querySelectorAll(".pebbles-text"), {
           opacity: 1,
           duration: 0.5,
           ease: "power1.inOut",
-          stagger: 0.1
+          stagger: 0.1,
         });
       }
     }
@@ -177,6 +176,14 @@ window.addEventListener("pageshow", (event) => {
 
 $(document).ready(function () {
   $(".pebbles-absolute-image div").on("click", function (event) {
+    event.preventDefault();
+    var href = $(this).attr("linkos");
+    $(href).trigger("click");
+  });
+});
+
+$(document).ready(function () {
+  $(".underline.is--link").on("click", function (event) {
     event.preventDefault();
     var href = $(this).attr("linkos");
     $(href).trigger("click");
