@@ -1,11 +1,3 @@
-// smooth scroll
-const lenis = new Lenis();
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
 $(".menu--link").on("click", function () {
   $(this).toggleClass("is--menu--open");
   $(".navbar-brand").toggleClass("is--menu--open");
@@ -44,34 +36,34 @@ trigger.addEventListener("click", () => {
     gsap.to(navbarMenu, {
       height: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(menuIcons, {
       opacity: 1,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(menuIconsClose, {
       opacity: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     isOpen = false;
   } else {
     gsap.to(navbarMenu, {
       height: "auto",
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(menuIcons, {
       opacity: 0,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     gsap.to(menuIconsClose, {
       opacity: 1,
       duration: 0.5,
-      ease: "power1.inOut"
+      ease: "power1.inOut",
     });
     isOpen = true;
   }
@@ -85,14 +77,14 @@ function pageLoad() {
   tl.to(".main-wrapper", {
     opacity: 1,
     ease: "Quint.easeOut",
-    duration: 0.5
+    duration: 0.5,
   });
   tl.from("[animation=loading]", {
     y: "20rem",
     opacity: "0",
     stagger: { each: 0.1, from: "start" },
     ease: "Quint.easeOut",
-    duration: 1
+    duration: 1,
   });
 }
 pageLoad();
@@ -105,14 +97,14 @@ $("[animation='fade']").each(function (index) {
     scrollTrigger: {
       trigger: triggerElement,
       // trigger element - viewport
-      start: "top bottom -=200rem"
-    }
+      start: "top bottom -=200rem",
+    },
   });
   tl.from(targetElement, {
     opacity: 0,
     y: "20rem",
     ease: "Quint.easeOut",
-    duration: 2
+    duration: 2,
   });
 });
 
@@ -122,12 +114,12 @@ $(".parallax--wrapper").each(function (index) {
       trigger: $(this),
       start: "top bottom -=200",
       end: "top top",
-      scrub: true
-    }
+      scrub: true,
+    },
   });
   tl.from($(this), {
     width: "80vw",
-    ease: "Quint.easeOut"
+    ease: "Quint.easeOut",
   });
 });
 
