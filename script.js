@@ -1,12 +1,3 @@
-if (window.innerWidth > 768) {
-  // smooth scroll
-  const lenis = new Lenis();
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-}
 $(".menu--link").on("click", function () {
   $(this).toggleClass("is--menu--open");
   $(".navbar-brand").toggleClass("is--menu--open");
