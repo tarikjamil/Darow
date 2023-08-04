@@ -41,3 +41,7 @@ html.lenis {
 .w-editor-edit-fade-in .main-wrapper {
   opacity: 1;
 }
+
+.w-editor-edit-fade-in .navbar--menu {
+  display: none;
+}
