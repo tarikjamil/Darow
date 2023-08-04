@@ -37,3 +37,7 @@ html.lenis {
     pointer-events: auto;
   }
 }
+
+.w-editor-edit-fade-in .main-wrapper {
+  opacity: 1;
+}
